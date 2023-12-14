@@ -13,7 +13,6 @@ import {
   DivIcons,
   EndSpan,
   FooterImg,
-  Header,
   HeaderSpan,
   IntroDiv,
   LeftDiv,
@@ -21,6 +20,7 @@ import {
   NameSpan,
   ServicesDiv,
 } from "../stayled";
+import { Heading } from "@chakra-ui/react";
 
 function About() {
   const theme = useContext(themeContext);
@@ -39,7 +39,6 @@ function About() {
         <Link to={"contact"} smooth={true} spy={true}>
           <Button>Hire me</Button>
         </Link>
-
         <DivIcons>
           <Ahref>
             <FooterImg src={Github} alt="" />
@@ -53,9 +52,10 @@ function About() {
         </DivIcons>
         <ServicesDiv className="services">
           <Div>
-            <Header style={{ color: darkMode ? "white" : "" }}>
-              My Resume
-            </Header>
+           
+            <Heading as="h2" size="4xl" fontSize="50px">
+            My Resume
+            </Heading>
             <Awesome href={Resume} download>
               <Button>Download CV</Button>
             </Awesome>

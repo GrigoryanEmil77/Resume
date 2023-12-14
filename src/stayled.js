@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import Wave from "./Img/wave.png";
-import boy1 from "./Img/em2.jpg";
-import Email from "./Img/mail.png";
-import Phone from "./Img/telephone.png";
+import Email from "./Img/email.png";
+import Phone from "./Img/phone-call.png";
 
 export const FooterDiv = styled.div`
   display: flex;
@@ -55,7 +54,7 @@ export const ToggleButton = styled.button`
   position: absolute;
 `;
 export const Button = styled.button`
-  background: linear-gradient(180deg, #5485e7 26.71%, #4f4dc4 99.36%);
+  background: linear-gradient(180deg, orange, rgb(216, 151, 29));
   box-shadow: 0px 20px 24px 3px rgba(84, 94, 233, 0.42);
   border-radius: 34px;
   border: none;
@@ -112,19 +111,7 @@ export const ServicesDiv = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const Header = styled.h1`
-  color: black;
-  font-size: 2.5rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin-top: 7rem;
-  @media screen and (max-width: 389px) {
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-`;
+
 export const Awesome = styled.a`
   display: flex;
   justify-content: center;
@@ -163,20 +150,7 @@ export const NavDiv = styled.div`
   display: flex;
   gap: 4rem;
 `;
-export const BoyImg = styled.img`
-  width: 350px;
-  height: 350px;
-  border-radius: 30%;
-  display: flex;
-  justify-content: center;
 
-  overflow: auto;
-  object-fit: scale-down;
-`;
-BoyImg.defaultProps = {
-  src: boy1,
-  alt: "",
-};
 export const BoyDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -232,18 +206,7 @@ export const ContactForm = styled.div`
     flex-direction: column;
   }
 `;
-export const ContactList = styled.div`
-  color: rgb(93, 100, 100);
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  @media screen and (max-width: 880px) {
-    color: rgb(93, 100, 100);
 
-    font-weight: bold;
-    text-align: center;
-  }
-`;
 export const SkillsList = styled.div`
   display: flex;
   justify-content: center;

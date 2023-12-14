@@ -1,15 +1,13 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
 import { FiMenu } from "react-icons/fi";
 import Toggle from "../Toggle/Toggle";
-import { themeContext } from "../Context/Context";
-import { Button, NavDiv, NavbarDiv } from "../../stayled";
+import { NavDiv, NavbarDiv } from "../../stayled";
+import { Button } from "@chakra-ui/react";
+import { MdCall } from "react-icons/md";
 
 const Navbari = () => {
   const [open, setOpen] = useState(false);
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
   return (
     <>
       <header
@@ -40,13 +38,7 @@ const Navbari = () => {
           >
             <ul className="text-base text-gray-600 lg:flex lg:justify-between">
               <li className="lg:px-5 py-2 hover:text-blue-500 font-semibold"></li>
-              <div
-                style={{
-                  color: darkMode ? "white" : "black",
-                  fontSize: "1rem",
-                }}
-                className="flex flex-col-reverse items-center space-x-10 mr-8  -tracking-tighterr font-semibold"
-              >
+              <div className="flex flex-col-reverse items-center space-x-10 mr-8  -tracking-tighterr font-semibold">
                 <NavbarDiv>
                   <NavDiv>
                     <Link
@@ -55,19 +47,26 @@ const Navbari = () => {
                       spy={true}
                       smooth={true}
                     >
-                      <button>Home</button>
+                      <Button>Home</Button>
                     </Link>
                     <Link to={"section"} spy={true} smooth={true}>
-                      <button> About</button>
+                      <Button> About</Button>
                     </Link>
                     <Link to={"services"} spy={true} smooth={true}>
-                      <button>MyResume</button>
+                      <Button>MyResume</Button>
                     </Link>
                     <Link to={"footer"} spy={true} smooth={true}>
-                      <button>Link</button>
+                      <Button>Link</Button>
                     </Link>
                     <Link to={"contact"} spy={true} smooth={true}>
-                      <Button>Contact</Button>
+                      <Button
+                        rightIcon={<MdCall />}
+                        color="blue"
+                        variant="outline"
+                        fontSize="20px"
+                      >
+                        Contact
+                      </Button>
                     </Link>
                   </NavDiv>
                 </NavbarDiv>

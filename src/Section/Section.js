@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import {
   DiJavascript1,
   DiReact,
@@ -9,13 +9,12 @@ import {
   DiBootstrap,
   DiMysql,
 } from "react-icons/di";
-import { themeContext } from "../components/Context/Context";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
-import { CircularProgress, List } from "@mui/material";
+import { List } from "@mui/material";
+import boy from "../Img/em2.jpg";
+import { Heading } from "@chakra-ui/react";
 import {
-  BoyImg,
-  Header,
   Div,
   BoyDiv,
   AboutDiv,
@@ -24,15 +23,17 @@ import {
   MailImg,
   Ahref,
   Contact,
-  ContactList,
   ContactForm,
   SkillsList,
   SkillsDiv,
 } from "../stayled";
+import {
+  CircularProgressLabel,
+  CircularProgress,
+  Image,
+} from "@chakra-ui/react";
 
 function Section() {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   const skills = [
     { id: 1, value: "Time Management" },
     { id: 2, value: "Effective Communication" },
@@ -43,9 +44,18 @@ function Section() {
   return (
     <Div className="section">
       <AboutDiv>
-        <Header style={{ color: darkMode ? "white" : "" }}> ABOUT ME</Header>
+        <Heading as="h2" size="4xl" fontSize="50px" textAlign="center">
+          ABOUT ME
+        </Heading>
+
         <BoyDiv>
-          <BoyImg />
+          <Image
+            borderRadius="70px"
+            boxSize="360px"
+            objectFit="cover"
+            src={boy}
+            alt=""
+          />
         </BoyDiv>
         <Text>
           Greetings! I'm Emil Grigoryan, a web developer.
@@ -61,9 +71,11 @@ function Section() {
         </Text>
       </AboutDiv>
       <Div>
-        <Header style={{ color: darkMode ? "white" : "" }}>
+        <Heading as="h2" size="4xl" fontSize="50px" textAlign="center">
+          {" "}
           PROFESSIONAL SKILLS
-        </Header>
+        </Heading>
+
         <SkillsDiv>
           <DiHtml5 size={100} color="orange" />
           <DiCss3 size={100} color="blue" />
@@ -78,7 +90,9 @@ function Section() {
         <DiMysql size={100} color="red" />
       </SkillsDiv>
       <Div>
-        <Header style={{ color: darkMode ? "white" : "" }}>LANGUAGE</Header>
+        <Heading as="h2" size="4xl" fontSize="50px" textAlign="center">
+          LANGUAGE
+        </Heading>
         <SkillsList>
           <List
             sx={{
@@ -91,12 +105,9 @@ function Section() {
             <ListItem
               disableGutters
               secondaryAction={
-                <CircularProgress
-                  style={{ marginLeft: "30px" }}
-                  color="success"
-                  variant="determinate"
-                  value={100}
-                />
+                <CircularProgress value={100} color="orange">
+                  <CircularProgressLabel>100%</CircularProgressLabel>
+                </CircularProgress>
               }
             >
               <ListItemText
@@ -107,12 +118,9 @@ function Section() {
             <ListItem
               disableGutters
               secondaryAction={
-                <CircularProgress
-                  style={{ marginLeft: "30px" }}
-                  color="success"
-                  variant="determinate"
-                  value={80}
-                />
+                <CircularProgress value={80} color="orange">
+                  <CircularProgressLabel>80%</CircularProgressLabel>
+                </CircularProgress>
               }
             >
               <ListItemText
@@ -123,12 +131,9 @@ function Section() {
             <ListItem
               disableGutters
               secondaryAction={
-                <CircularProgress
-                  style={{ marginLeft: "30px" }}
-                  color="success"
-                  variant="determinate"
-                  value={70}
-                />
+                <CircularProgress value={70} color="orange">
+                  <CircularProgressLabel>70%</CircularProgressLabel>
+                </CircularProgress>
               }
             >
               <ListItemText
@@ -140,7 +145,9 @@ function Section() {
         </SkillsList>
       </Div>
       <Div>
-        <Header style={{ color: darkMode ? "white" : "" }}>SKILLS</Header>
+        <Heading as="h2" size="4xl" fontSize="50px" textAlign="center">
+          SKILLS
+        </Heading>
         <SkillsList>
           <List
             sx={{
@@ -155,12 +162,9 @@ function Section() {
                 key={name.id}
                 disableGutters
                 secondaryAction={
-                  <CircularProgress
-                    style={{ marginLeft: "30px" }}
-                    color="success"
-                    variant="determinate"
-                    value={100}
-                  />
+                  <CircularProgress value={100} color="orange">
+                    <CircularProgressLabel>100%</CircularProgressLabel>
+                  </CircularProgress>
                 }
               >
                 <ListItemText
@@ -174,23 +178,26 @@ function Section() {
       </Div>
 
       <Div>
-        <Header style={{ color: darkMode ? "white" : "" }}>CONTACT ME</Header>
+        <Heading as="h2" size="4xl" fontSize="50px" textAlign="center">
+          CONTACT ME
+        </Heading>
         <ContactForm>
           <Contact className="contact">
             <Ahref href="mailto:egrigoryan264@gmail.com">
               <MailImg />
             </Ahref>
-            <ContactList style={{ color: darkMode ? "white" : "" }}>
+            <Heading as="h2" size="4xl" fontSize="30px">
               egrigoryan264@gmail.com
-            </ContactList>
+            </Heading>
           </Contact>
           <Contact>
             <Ahref href="tel:37441069001">
               <PhoneImg />
             </Ahref>
-            <ContactList style={{ color: darkMode ? "white" : "" }}>
+
+            <Heading as="h2" size="4xl" fontSize="30px">
               041069001
-            </ContactList>
+            </Heading>
           </Contact>
         </ContactForm>
       </Div>
