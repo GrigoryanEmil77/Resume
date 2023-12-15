@@ -34,25 +34,7 @@ FooterImg.defaultProps = {
   src: Wave,
   alt: "",
 };
-export const ToggleDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border: 3px solid rgb(18, 11, 152);
-  border-radius: 1rem;
-  position: relative;
-  padding: 2px;
-  cursor: pointer;
-  > * {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: blue;
-  }
-`;
-export const ToggleButton = styled.button`
-  border-radius: 100%;
-  background: blue;
-  position: absolute;
-`;
+
 export const Button = styled.button`
   background: linear-gradient(180deg, orange, rgb(216, 151, 29));
   box-shadow: 0px 20px 24px 3px rgba(84, 94, 233, 0.42);
@@ -89,11 +71,6 @@ export const LeftDiv = styled.div`
   position: relative;
   flex: 17;
   flex-direction: column;
-`;
-export const NameDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
 `;
 export const DivIcons = styled.div`
   margin-top: 3rem;
@@ -215,7 +192,6 @@ export const SkillsList = styled.div`
   font-weight: bold;
   gap: 1rem;
 `;
-
 export const SkillsDiv = styled.div`
   display: flex;
   justify-content: space-around;

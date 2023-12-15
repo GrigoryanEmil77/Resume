@@ -6,6 +6,7 @@ import Resume from "../About/resume.pdf";
 import { themeContext } from "../components/Context/Context";
 import { Link } from "react-scroll";
 import {
+  AboutDiv,
   Ahref,
   Awesome,
   Button,
@@ -16,7 +17,6 @@ import {
   HeaderSpan,
   IntroDiv,
   LeftDiv,
-  NameDiv,
   NameSpan,
   ServicesDiv,
 } from "../stayled";
@@ -29,13 +29,13 @@ function About() {
   return (
     <IntroDiv>
       <LeftDiv>
-        <NameDiv>
+        <AboutDiv>
           <HeaderSpan style={{ color: darkMode ? "white" : "" }}>
             Hy! I Am
           </HeaderSpan>
           <NameSpan>EMIL GRIGORYAN</NameSpan>
           <EndSpan>JUNIOR FRONT-END DEVELOPER</EndSpan>
-        </NameDiv>
+        </AboutDiv>
         <Link to={"contact"} smooth={true} spy={true}>
           <Button>Hire me</Button>
         </Link>
@@ -52,9 +52,8 @@ function About() {
         </DivIcons>
         <ServicesDiv className="services">
           <Div>
-           
             <Heading as="h2" size="4xl" fontSize="50px">
-            My Resume
+              My Resume
             </Heading>
             <Awesome href={Resume} download>
               <Button>Download CV</Button>
