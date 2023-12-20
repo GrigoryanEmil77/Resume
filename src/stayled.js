@@ -114,20 +114,13 @@ export const EndSpan = styled.span`
   color: rgb(93, 100, 100);
   margin-top: 10px;
 `;
-export const NavbarDiv = styled.div`
+
+export const NavDiv = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 4rem;
+  padding: 0.1rem 7rem;
 `;
-export const NavDiv = styled.div`
-  flex: 40;
-  align-items: center;
-  justify-content: left;
-  display: flex;
-  gap: 4rem;
-`;
-
 export const BoyDiv = styled.div`
   display: flex;
   justify-content: center;
