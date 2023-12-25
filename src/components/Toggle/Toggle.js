@@ -8,7 +8,7 @@ const Toggle = () => {
   const ToggleDiv = styled.div`
     display: flex;
     justify-content: space-between;
-    border: 3px solid rgb(18, 11, 152);
+    border: 3px solid tomato;
     border-radius: 1rem;
     position: relative;
     padding: 2px;
@@ -16,14 +16,15 @@ const Toggle = () => {
     > * {
       width: 1.5rem;
       height: 1.5rem;
-      color: blue;
+      color: tomato;
     }
   `;
   const ToggleButton = styled.button`
     border-radius: 100%;
-    background: blue;
+    background: tomato;
     position: absolute;
   `;
+
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   const handleClick = () => {
